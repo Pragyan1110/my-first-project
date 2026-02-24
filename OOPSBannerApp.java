@@ -1,23 +1,52 @@
-public static void main(String[] args) {
+public class OOPSBannerApp {
 
-    System.out.println(String.join("  ",
-            " ***** ", " ***** ", " ******", " ***** "));
+    public static void main(String[] args) {
 
-    System.out.println(String.join("  ",
-            "*     *", "*     *", "*     *", "*     *"));
+        String[] o = buildO();
+        String[] p = buildP();
+        String[] s = buildS();
 
-    System.out.println(String.join("  ",
-            "*     *", "*     *", "*     *", "*      "));
+        for (int i = 0; i < o.length; i++) {
+            System.out.println(String.join("  ", o[i], o[i], p[i], s[i]));
+        }
+    }
 
-    System.out.println(String.join("  ",
-            "*     *", "*     *", "****** ", " ***** "));
+    // Static method for letter O
+    public static String[] buildO() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        };
+    }
 
-    System.out.println(String.join("  ",
-            "*     *", "*     *", "*      ", "      *"));
+    // Static method for letter P
+    public static String[] buildP() {
+        return new String[]{
+                " ******",
+                "*     *",
+                "*     *",
+                "****** ",
+                "*      ",
+                "*      ",
+                "*      "
+        };
+    }
 
-    System.out.println(String.join("  ",
-            "*     *", "*     *", "*      ", "*     *"));
-
-    System.out.println(String.join("  ",
-            " ***** ", " ***** ", "*      ", " ***** "));
+    // Static method for letter S
+    public static String[] buildS() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*      ",
+                " ***** ",
+                "      *",
+                "*     *",
+                " ***** "
+        };
+    }
 }
